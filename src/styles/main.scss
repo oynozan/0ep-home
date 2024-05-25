@@ -1,0 +1,87 @@
+@import 'fonts';
+
+:root {
+    --main: #5518ed;
+    --second: #6e38f7;
+    --dark: rgb(22, 23, 24);
+    --light: #f5f5f5;
+    --green: rgb(197, 255, 74);
+}
+
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    background-image: url('../../public/images/background.svg');
+    background-repeat: repeat;
+    background-size: 256px;
+    overflow-x: hidden;
+    font-family: "Inter";
+    color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+
+    span {
+        color: var(--second);
+        font-weight: 500;
+    }
+}
+
+a, button {
+    color: var(--light);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: var(--second);
+    }
+}
+
+input, textarea, button {
+    outline: none;
+    transition: 200ms;
+}
+
+main {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 1800px;
+
+    img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+    }
+}
+
+::selection {
+    background: #5418ed7c;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--second);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main);
+}

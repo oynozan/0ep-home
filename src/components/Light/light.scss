@@ -1,0 +1,18 @@
+.light {
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    opacity: .08;
+    border-radius: 50%;
+    animation: glow;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+    0% { scale: 1; }
+    50% { scale: 1.2; }
+    100% { scale: 1; }
+}

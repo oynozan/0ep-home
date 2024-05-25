@@ -1,0 +1,275 @@
+@mixin W($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+#home main {
+    > div {
+        > h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        > p {
+            font-size: 21px;
+            margin: 0 auto 10px auto;
+            text-align: center;
+            width: 80%;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100dvh - (130px + 100px));
+        max-height: 1440px;
+        margin-top: 100px;
+
+        .nav-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include W(400px) {
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                max-width: 80%;
+                font-size: 120px;
+                text-align: center;
+                line-height: 100px;
+                background: -webkit-linear-gradient(270deg, var(--light) 60%, var(--main));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                @include W(1165px) {
+                    font-size: 10vw;
+                    line-height: 8vw;
+                }
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 23px;
+                max-width: 60%;
+                text-align: center;
+                margin-top: 60px;
+                font-family: "Poppins";
+            }
+        }
+
+        .nav-img {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                transition: 200ms;
+                height: 200px;
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    #how-it-works {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 0 auto;
+
+        @include W(1000px) {
+            width: 90%;
+        }
+
+        .how {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            &:nth-child(odd) {
+                justify-content: flex-start;
+            }
+            &:nth-child(even) {
+                justify-content: flex-end;
+            }
+
+            p {
+                background: rgba(0, 0, 0, .3);
+                padding: 20px;
+                border-radius: 5px;
+                border: 1px solid #fefefe34;
+                font-size: 22px;
+                max-width: 50%;
+
+                @include W(1100px) {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+
+    #usage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+
+        .outer-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: 300px;
+            border-radius: 10px;
+            margin: 0 0 40px 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 300%;
+                height: 220%;
+                top: -50%;
+                left: -100%;
+                z-index: -1;
+                background: linear-gradient(30deg, rgb(255, 0, 98), rgb(90, 90, 250), rgb(23, 255, 2));
+                background-repeat: repeat;
+                animation: rotate-bg;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                height: calc(100% - 6px);
+                width: calc(100% - 6px);
+                background: var(--dark);
+                border-radius: 7px;
+
+                p {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: rgb(184, 184, 184);
+                }
+            }
+        }
+
+        small {
+            display: block;
+            font-size: 14px;
+            margin: 25px 0 5px 0;
+            color: rgb(189, 189, 189);
+            font-family: "Poppins";
+        }
+
+        > img {
+            margin: 40px 0 60px 0;
+
+            @include W(700px) {
+                width: 80%;
+            }
+        }
+    }
+
+    #roadmap {
+        margin-top: 150px;
+
+        .roadmap-box {
+            display: flex;
+            margin: 40px auto 0 auto;
+            background: rgba(0, 0, 0, .6);
+            border-radius: 9px;
+            border: 1px solid #fefefe34;
+            width: 60%;
+            height: 340px;
+
+            @include W(1000px) {
+                width: 90%;
+            }
+
+            .list {
+                border-right: 1px solid #fefefe34;
+                font-weight: 600;
+                font-size: 20px;
+
+                > div {
+                    padding: 15px 35px 15px 15px;
+                    white-space: nowrap;
+                    cursor: pointer;
+
+                    &:hover { background-color: rgba(255, 255, 255, .1); }
+
+                    &.active { color: var(--green); }
+                }
+            }
+
+            .desc {
+                padding: 20px;
+                font-size: 18px;
+                overflow-y: auto;
+
+                h4 {
+                    margin-top: 20px;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    #faq {
+        display: block;
+        margin: 150px auto;
+        width: 65%;
+
+        @include W(1000px) {
+            width: 90%;
+        }
+
+        h3 {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-family: "Poppins";
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin: 50px auto;
+        background: rgba(0, 0, 0, .3);
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid #fefefe34;
+        font-size: 22px;
+    }
+}
+
+@keyframes rotate-bg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

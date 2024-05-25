@@ -1,0 +1,29 @@
+.dropdown-wrapper {
+    position: relative;
+
+    .dropdown {
+        position: absolute;
+        z-index: 9999;
+        background: var(--dark);
+        padding: 8px 0;
+        width: 100%;
+        min-width: 300px;
+        right: 0;
+        margin-top: 16px;
+        border-radius: 8px;
+        box-shadow: 0 0px 10px 0 rgba(96, 96, 96, .2);
+
+        .item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: var(--light);
+            font-size: 17px;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(255, 255, 255, .07);
+            }
+        }
+    }
+}
