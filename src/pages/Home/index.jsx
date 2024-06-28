@@ -35,7 +35,7 @@ export default function Home() {
                     <div className="nav-text">
                         <h1>A new era in communication</h1>
                         <p>
-                            <span>0ep Protocol</span> is an anonymous communication channel that secured with&nbsp;
+                            <span>0ep Protocol</span> is an anonymous communication channel that is secured with&nbsp;
                             <a href="https://zkpass.org/" style={{ color: '#c5ff4a' }}>zkPass</a>
                         </p>
                     </div>
