@@ -184,7 +184,7 @@ export default function Home() {
                     <p>You can run <span>0ep</span> on your local or public server. This allows you to run your own <span>0ep instance</span> just for you and your friends. Follow the installation guide on the Github repository.</p>
 
                     <h3>What do I need to use 0ep Protocol?</h3>
-                    <p>You need a <a href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" style={{ color: '#c5ff4a' }}>Metamask</a> wallet and <a href="https://chromewebstore.google.com/detail/zkpass-transgate/afkoofjocpbclhnldmmaphappihehpma" style={{ color: '#c5ff4a' }}>zkPass Transgate</a> extension on your Chrome browser.</p>
+                    <p>You need a <a href="https://chromewebstore.google.com/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap" style={{ color: '#c5ff4a' }}>Keplr</a> wallet and <a href="https://chromewebstore.google.com/detail/zkpass-transgate/afkoofjocpbclhnldmmaphappihehpma" style={{ color: '#c5ff4a' }}>zkPass Transgate</a> extension on your Chrome browser.</p>
 
                     <h3>What is "importing" feature?</h3>
                     <p>Imagine there are users using <span>0ep Protocol</span> in a Discord server. When you import a server, you can join a chat with all of the other users in it. But this time, all of you are anonymous.</p>
